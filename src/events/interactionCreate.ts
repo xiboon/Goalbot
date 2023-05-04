@@ -15,6 +15,7 @@ export async function interactionCreate(
         }
         return;
     }
+    // h
     if (!interaction.isChatInputCommand()) return;
     const command = client.commands.get(interaction.commandName);
     if (!command) return;
