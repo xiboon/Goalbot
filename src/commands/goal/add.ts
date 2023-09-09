@@ -1,16 +1,13 @@
 import {
     AutocompleteInteraction,
     ChatInputCommandInteraction,
-    SlashCommandBuilder
+    SlashCommandSubcommandBuilder
 } from 'discord.js';
-import { GoalBot } from '../classes/GoalBot.js';
-import { parseMoneyToUSD } from '../utils/parseMoney.js';
-import { createGoalEmbed } from '../utils/createGoalEmbed.js';
+import { GoalBot } from '../../classes/GoalBot.js';
+import { parseMoneyToUSD } from '../../utils/parseMoney.js';
+import { createGoalEmbed } from '../../utils/createGoalEmbed.js';
 
-export async function run(
-    client: GoalBot,
-    interaction: ChatInputCommandInteraction
-) {
+export async function run(client: GoalBot, interaction: ChatInputCommandInteraction) {
     const goal = interaction.options.getString('goal', true);
     const goalData = await client.manager.getGoal(interaction.user.id, goal);
     const amount = interaction.options.getString('amount', true);
@@ -23,17 +20,11 @@ export async function run(
     let parsedAmount: number;
     if (splitAmount.length < 2) {
         const { currency } = await client.manager.getUser(interaction.user.id);
-        parsedAmount = parseMoneyToUSD(client, parseInt(amount[0]), currency);
+        parsedAmount = parseMoneyToUSD(client, parseInt(splitAmount[0]), currency);
     } else {
         const [, currency] = splitAmount;
-        console.log({ currency, splitAmount });
-        parsedAmount = parseMoneyToUSD(
-            client,
-            parseInt(splitAmount[0]),
-            currency
-        );
+        parsedAmount = parseMoneyToUSD(client, parseInt(splitAmount[0]), currency);
     }
-    console.log({ parsedAmount, saved: goalData.amount_saved });
     goalData.amount_saved += parsedAmount;
     goalData.user_id = interaction.user.id;
     client.manager.updateGoal(goalData);
@@ -73,7 +64,7 @@ export async function autocomplete(
     }
 }
 
-export const data = new SlashCommandBuilder()
+export const data = new SlashCommandSubcommandBuilder()
     .setName('add')
     .setDescription('Add money to a goal.')
     .addStringOption(option =>

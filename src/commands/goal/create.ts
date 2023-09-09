@@ -7,10 +7,7 @@ import { GoalBot } from '../../classes/GoalBot.js';
 import { createGoalEmbed } from '../../utils/createGoalEmbed.js';
 import { roundToDecimal } from '../../utils/roundToDecimal.js';
 import { parseMoneyToUSD } from '../../utils/parseMoney.js';
-export async function run(
-    client: GoalBot,
-    interaction: ChatInputCommandInteraction
-) {
+export async function run(client: GoalBot, interaction: ChatInputCommandInteraction) {
     // validate all arguments
     const name = interaction.options.getString('name', true);
     let amount: string | number = interaction.options.getString('amount', true);
@@ -20,16 +17,13 @@ export async function run(
             ephemeral: true,
             content: 'Please provide a valid amount needed.'
         });
-    console.log(amount);
+
     if (['USD', 'EUR', 'GBP', 'PLN'].includes(amount.split('-')[1])) {
         const [realAmount, currency] = amount.split('-');
-        console.log(realAmount, currency);
         amount = parseMoneyToUSD(client, parseFloat(realAmount), currency);
-        console.log(amount, 'LOL');
     } else {
         const defaultCurrency =
-            (await client.manager.getUser(interaction.user.id)).currency ??
-            'USD';
+            (await client.manager.getUser(interaction.user.id)).currency ?? 'USD';
         amount = parseInt(amount) / client.currencies[defaultCurrency];
     }
 
@@ -56,9 +50,7 @@ export async function run(
 export async function autocomplete(_, interaction: AutocompleteInteraction) {
     const focused = interaction.options.getFocused(true);
     if (!parseInt(focused?.value))
-        return interaction.respond([
-            { name: 'Invalid amount', value: 'invalid' }
-        ]);
+        return interaction.respond([{ name: 'Invalid amount', value: 'invalid' }]);
     const values = ['USD', 'EUR', 'PLN', 'GBP'].map(e => ({
         name: `${focused.value} ${e}`,
         value: `${focused.value}-${e}`
@@ -74,6 +66,7 @@ export const data = new SlashCommandSubcommandBuilder()
             .setName('name')
             .setDescription('Name of the goal.')
             .setRequired(true)
+            .setMaxLength(50)
     )
     .addStringOption(option =>
         option
@@ -83,5 +76,8 @@ export const data = new SlashCommandSubcommandBuilder()
             .setRequired(true)
     )
     .addStringOption(option =>
-        option.setName('description').setDescription('Description of the goal.')
+        option
+            .setName('description')
+            .setDescription('Description of the goal.')
+            .setMaxLength(300)
     );

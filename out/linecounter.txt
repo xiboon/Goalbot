@@ -1,0 +1,157 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2023-09-03 22:47:14
+count workspace : c:\Users\kubus\Goalbot
+total files : 58
+total code lines : 4135
+total comment lines : 20
+total blank lines : 59
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |             30|              0|              4|   0.73|
+   |          .json|           2576|              0|             21|     62|
+   |            .ts|            772|             13|             23|     19|
+   |            .md|             36|              7|             11|   0.87|
+   |            .js|            721|              0|              0|     17|
+   -------------------------------------------------------------------------
+.editorconfig, code is 7, comment is 0, blank is 0.
+.env, code is 1, comment is 0, blank is 0.
+.eslintignore, code is 2, comment is 0, blank is 0.
+.eslintrc.json, code is 184, comment is 0, blank is 19.
+.github\CODE_OF_CONDUCT.md, code is 34, comment is 7, blank is 11.
+.gitignore, code is 3, comment is 0, blank is 0.
+.prettierrc.json, code is 9, comment is 0, blank is 0.
+database.sqlite, it is a binary file.
+dist\classes\GoalBot.js, code is 58, comment is 0, blank is 0.
+dist\classes\GoalManager.js, code is 74, comment is 0, blank is 0.
+dist\classes\Loaders.js, code is 47, comment is 0, blank is 0.
+dist\commands\add.js, code is 72, comment is 0, blank is 0.
+dist\commands\goal.js, code is 37, comment is 0, blank is 0.
+dist\commands\goalCommands\add.js, code is 72, comment is 0, blank is 0.
+dist\commands\goalCommands\create.js, code is 67, comment is 0, blank is 0.
+dist\commands\goalCommands\delete.js, code is 34, comment is 0, blank is 0.
+dist\commands\goalCommands\view.js, code is 8, comment is 0, blank is 0.
+dist\commands\group.js, code is 24, comment is 0, blank is 0.
+dist\commands\groupCommands\create.js, code is 25, comment is 0, blank is 0.
+dist\commands\groupCommands\view.js, code is 29, comment is 0, blank is 0.
+dist\components\createGroup.js, code is 25, comment is 0, blank is 0.
+dist\components\test.js, code is 0, comment is 0, blank is 0.
+dist\events\interactionCreate.js, code is 51, comment is 0, blank is 0.
+dist\index.js, code is 3, comment is 0, blank is 0.
+dist\modals\createGroup.js, code is 23, comment is 0, blank is 0.
+dist\modals\test.js, code is 0, comment is 0, blank is 0.
+dist\types\Database.js, code is 1, comment is 0, blank is 0.
+dist\utils\createGoalEmbed.js, code is 31, comment is 0, blank is 0.
+dist\utils\createGroupEmbed.js, code is 27, comment is 0, blank is 0.
+dist\utils\getCurrencies.js, code is 5, comment is 0, blank is 0.
+dist\utils\parseMoney.js, code is 5, comment is 0, blank is 0.
+dist\utils\roundToDecimal.js, code is 3, comment is 0, blank is 0.
+LICENSE, code is 17, comment is 0, blank is 4.
+package-lock.json, code is 2319, comment is 0, blank is 0.
+package.json, code is 48, comment is 0, blank is 2.
+README.md, code is 2, comment is 0, blank is 0.
+src\classes\GoalBot.ts, code is 64, comment is 6, blank is 3.
+src\classes\GoalManager.ts, code is 79, comment is 0, blank is 0.
+src\classes\Loaders.ts, code is 44, comment is 0, blank is 0.
+src\commands\goal.ts, code is 45, comment is 0, blank is 1.
+src\commands\goalCommands\add.ts, code is 83, comment is 0, blank is 2.
+src\commands\goalCommands\create.ts, code is 78, comment is 1, blank is 4.
+src\commands\goalCommands\delete.ts, code is 37, comment is 0, blank is 1.
+src\commands\goalCommands\view.ts, code is 9, comment is 0, blank is 1.
+src\commands\group.ts, code is 33, comment is 3, blank is 0.
+src\commands\groupCommands\create.ts, code is 31, comment is 0, blank is 2.
+src\commands\groupCommands\view.ts, code is 39, comment is 0, blank is 1.
+src\components\createGroup.ts, code is 32, comment is 0, blank is 1.
+src\events\interactionCreate.ts, code is 44, comment is 1, blank is 1.
+src\index.ts, code is 3, comment is 0, blank is 0.
+src\modals\createGroup.ts, code is 25, comment is 0, blank is 2.
+src\types\Database.ts, code is 34, comment is 0, blank is 1.
+src\utils\createGoalEmbed.ts, code is 45, comment is 1, blank is 0.
+src\utils\createGroupEmbed.ts, code is 33, comment is 1, blank is 1.
+src\utils\getCurrencies.ts, code is 6, comment is 0, blank is 1.
+src\utils\parseMoney.ts, code is 5, comment is 0, blank is 1.
+src\utils\roundToDecimal.ts, code is 3, comment is 0, blank is 0.
+tsconfig.json, code is 16, comment is 0, blank is 0.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2023-09-06 19:44:23
+count workspace : /home/kubus/Projects/Goalbot
+total files : 57
+total code lines : 4029
+total comment lines : 19
+total blank lines : 61
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |          .json|           2575|              0|             21|     64|
+   |            .js|            635|              0|              0|     16|
+   |            .ts|            753|             12|             25|     19|
+   |            .md|             36|              7|             11|   0.89|
+   |               |             30|              0|              4|   0.74|
+   -------------------------------------------------------------------------
+.editorconfig, code is 7, comment is 0, blank is 0.
+.env, code is 1, comment is 0, blank is 0.
+.eslintignore, code is 2, comment is 0, blank is 0.
+.eslintrc.json, code is 184, comment is 0, blank is 19.
+.github/CODE_OF_CONDUCT.md, code is 34, comment is 7, blank is 11.
+.gitignore, code is 3, comment is 0, blank is 0.
+.prettierrc.json, code is 9, comment is 0, blank is 0.
+database.sqlite, it is a binary file.
+dist/classes/GoalBot.js, code is 57, comment is 0, blank is 0.
+dist/classes/GoalManager.js, code is 74, comment is 0, blank is 0.
+dist/classes/Loaders.js, code is 52, comment is 0, blank is 0.
+dist/commands/goal/add.js, code is 72, comment is 0, blank is 0.
+dist/commands/goal/create.js, code is 67, comment is 0, blank is 0.
+dist/commands/goal/delete.js, code is 34, comment is 0, blank is 0.
+dist/commands/goal/index.js, code is 4, comment is 0, blank is 0.
+dist/commands/goal/view.js, code is 8, comment is 0, blank is 0.
+dist/commands/group/create.js, code is 25, comment is 0, blank is 0.
+dist/commands/group/index.js, code is 4, comment is 0, blank is 0.
+dist/commands/group/view.js, code is 29, comment is 0, blank is 0.
+dist/components/createGroup.js, code is 25, comment is 0, blank is 0.
+dist/events/interactionCreate.js, code is 62, comment is 0, blank is 0.
+dist/events/ready.js, code is 24, comment is 0, blank is 0.
+dist/index.js, code is 3, comment is 0, blank is 0.
+dist/modals/createGroup.js, code is 23, comment is 0, blank is 0.
+dist/types/Database.js, code is 1, comment is 0, blank is 0.
+dist/utils/createGoalEmbed.js, code is 31, comment is 0, blank is 0.
+dist/utils/createGroupEmbed.js, code is 27, comment is 0, blank is 0.
+dist/utils/getCurrencies.js, code is 5, comment is 0, blank is 0.
+dist/utils/parseMoney.js, code is 5, comment is 0, blank is 0.
+dist/utils/roundToDecimal.js, code is 3, comment is 0, blank is 0.
+LICENSE, code is 17, comment is 0, blank is 4.
+package-lock.json, code is 2318, comment is 0, blank is 0.
+package.json, code is 48, comment is 0, blank is 2.
+README.md, code is 2, comment is 0, blank is 0.
+src/classes/GoalBot.ts, code is 63, comment is 6, blank is 3.
+src/classes/GoalManager.ts, code is 79, comment is 0, blank is 0.
+src/classes/Loaders.ts, code is 52, comment is 1, blank is 0.
+src/commands/goal/add.ts, code is 83, comment is 0, blank is 2.
+src/commands/goal/create.ts, code is 78, comment is 1, blank is 4.
+src/commands/goal/delete.ts, code is 37, comment is 0, blank is 1.
+src/commands/goal/index.ts, code is 4, comment is 0, blank is 1.
+src/commands/goal/view.ts, code is 9, comment is 0, blank is 1.
+src/commands/group/create.ts, code is 31, comment is 0, blank is 2.
+src/commands/group/index.ts, code is 4, comment is 0, blank is 1.
+src/commands/group/view.ts, code is 39, comment is 0, blank is 1.
+src/components/createGroup.ts, code is 32, comment is 0, blank is 1.
+src/events/interactionCreate.ts, code is 60, comment is 0, blank is 1.
+src/events/ready.ts, code is 28, comment is 2, blank is 1.
+src/index.ts, code is 3, comment is 0, blank is 0.
+src/modals/createGroup.ts, code is 25, comment is 0, blank is 2.
+src/types/Database.ts, code is 34, comment is 0, blank is 1.
+src/utils/createGoalEmbed.ts, code is 45, comment is 1, blank is 0.
+src/utils/createGroupEmbed.ts, code is 33, comment is 1, blank is 1.
+src/utils/getCurrencies.ts, code is 6, comment is 0, blank is 1.
+src/utils/parseMoney.ts, code is 5, comment is 0, blank is 1.
+src/utils/roundToDecimal.ts, code is 3, comment is 0, blank is 0.
+tsconfig.json, code is 16, comment is 0, blank is 0.
+===============================================================================

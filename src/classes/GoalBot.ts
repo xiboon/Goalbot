@@ -18,10 +18,12 @@ export class GoalBot extends Client {
         //     }
         // }
     });
-    commands: Collection<string, any>;
     events: Map<string, any>;
     manager = new GoalManager(this.db);
     currencies: Record<string, number>;
+    commands: Collection<string, any>;
+    components: Collection<string, any>;
+    modals: Collection<string, any>;
     constructor() {
         super({
             intents: ['GuildMembers'],
@@ -31,6 +33,10 @@ export class GoalBot extends Client {
     }
     async setup() {
         this.currencies = await getCurrencies();
+        this.components = await Loaders.loadComponents('../components');
+        this.commands = await Loaders.loadCommands('../commands');
+        this.modals = await Loaders.loadModals('../modals');
+        await Loaders.loadEvents(this, '../events');
         this.db.schema
             .createTable('users')
             .addColumn('id', 'integer', col => col.primaryKey())
@@ -40,7 +46,7 @@ export class GoalBot extends Client {
         this.db.schema
             .createTable('goals')
             .addColumn('id', 'integer', col => col.primaryKey().autoIncrement())
-            .addColumn('user_id', 'integer')
+            .addColumn('user_id', 'text')
             .addColumn('goal', 'text')
             .addColumn('amount', 'integer')
             .addColumn('amount_saved', 'integer')
@@ -48,11 +54,16 @@ export class GoalBot extends Client {
             .addColumn('description', 'text')
             .ifNotExists()
             .execute();
-        await this.login();
-        this.commands = await Loaders.loadCommands('../commands');
-        await Loaders.loadEvents(this, '../events');
+        this.db.schema
+            .createTable('groups')
+            .addColumn('ids', 'text')
+            .addColumn('user_id', 'text')
+            .addColumn('name', 'text')
+            .addColumn('description', 'text')
+            .ifNotExists()
+            .execute();
 
-        this.application.commands.set(this.commands.map(cmd => cmd.data));
+        await this.login();
 
         setInterval(async () => {
             this.currencies = await getCurrencies();
