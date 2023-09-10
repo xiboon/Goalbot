@@ -9,7 +9,7 @@ export async function run(client: GoalBot, interaction: ChatInputCommandInteract
     const goals = (await client.manager.listGoals(interaction.user.id)).map(goal => ({
         label: goal.goal,
         value: goal.id.toString(),
-        description: goal.description
+        description: goal.description || 'No description.'
     }));
 
     if (!goals.length)
